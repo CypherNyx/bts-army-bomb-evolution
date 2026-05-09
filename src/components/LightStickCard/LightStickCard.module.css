@@ -1,0 +1,81 @@
+.card {
+  width: 100vw;
+  min-width: 300px;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-8);
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 1023px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.yearNumber {
+  font-size: var(--text-base);
+  color: var(--color-red);
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-1);
+}
+
+.versionName {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: var(--text-3xl);
+  line-height: 1;
+  margin-bottom: var(--space-8);
+}
+
+.imageContainer {
+  margin-bottom: var(--space-8);
+}
+
+.imageContainer img {
+  width: auto;
+  height: 320px;
+  object-fit: contain;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.releaseDate {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.gapPill {
+  background-color: var(--color-red);
+  color: var(--color-text-inverse);
+  padding: var(--space-1) var(--space-4);
+  border-radius: 999px;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tourList {
+  margin-top: var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.moreTours {
+  font-style: italic;
+  opacity: 0.7;
+}

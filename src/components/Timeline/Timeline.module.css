@@ -1,0 +1,131 @@
+.timelineSection {
+  background-color: var(--color-bg);
+  padding: 80px var(--space-8);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+}
+
+.header h2 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.headerLine {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-accent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+}
+
+.card {
+  background-color: var(--color-bg);
+  padding: 40px;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 250ms ease;
+}
+
+.card:hover {
+  background-color: var(--color-surface);
+}
+
+.year {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  color: var(--color-accent);
+  line-height: 1;
+  transition: color 250ms ease;
+}
+
+.card:hover .year {
+  color: #382452; /* Slightly darker accent */
+}
+
+.version {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.image {
+  max-height: 280px;
+  object-fit: contain;
+  filter: grayscale(10%);
+  transition: filter 250ms ease;
+}
+
+.card:hover .image {
+  filter: grayscale(0%);
+}
+
+.releaseDate {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.gapPill {
+  background-color: var(--color-accent-bg);
+  color: var(--color-accent);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 100px;
+  display: inline-block;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.tourName {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
